@@ -28,6 +28,7 @@ all: wapptclsh
 
 wapptclsh: wapptclsh.c
 	$(CC) -I. -I$(TCLINC) -o $@ $(OPTS) wapptclsh.c $(TCLLIB)
+	strip $@
 
 wapptclsh.c:	wapptclsh.c.in wapp.tcl app.tcl markdown.tcl wapptclsh.tcl tclsqlite3.c mkccode.tcl
 	$(TCLSH) mkccode.tcl wapptclsh.c.in >$@

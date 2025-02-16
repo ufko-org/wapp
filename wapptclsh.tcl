@@ -3,8 +3,15 @@
 proc initialize_wapptclsh {} {
   global argv argv0 main_script
   if {[llength $argv]==0} {
-		puts stdout "Wapp 1.0 shell using SQLite version [sqlite3 -version]\
-								 and TCL $::tcl_version"
+		puts "
+ _ _ _             
+| | | |___ ___ ___ 
+| | | | .'| . | . |
+|_____|__,|  _|  _|
+          |_| |_|  
+"
+		puts "Wapp 1.0 shell using SQLite version [sqlite3 -version]\
+				  and TCL $::tcl_version"
 		return
   } else {
     set script [lindex $argv 0]

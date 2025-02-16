@@ -56,10 +56,11 @@ frequently, you can place it right here :)
 	- deployment equals to copy new `wapptclsh` binary to the server
 
 If you want to exclude these files from the compilation process, please
-edit the `Makefile` and `wapptclsh.c.in` file.  Note that I had to
-remove `-ldl` from `Makefile` because OpenBSD does not have `libdl`, and
-since I do not use other operating systems, I cannot test the `Makefile`
-on different platforms.
+edit the `Makefile` and `wapptclsh.c.in` file.  
+
+Note that I had to remove `-ldl` from `Makefile` because OpenBSD does
+not have `libdl`, and since I do not use other operating systems, I
+cannot test the `Makefile` on different platforms.
 
 ## API Changes  
 

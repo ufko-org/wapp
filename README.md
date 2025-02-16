@@ -31,7 +31,10 @@ independently within the Wapp framework.
   wapp-start $argv
   ```  
 
-  This keeps `index.cgi` minimal and easier to maintain.  
+  This keeps `index.cgi` minimal and easier to maintain. This also means that:
+
+	- entire application code is outside of the document root
+	- deployment equals to copy new `wapptclsh` binary to the server
 
 If you want to exclude these files from the compilation process, please
 edit the `Makefile` and `wapptclsh.c.in` file.  Note that I had to

@@ -17,7 +17,7 @@ everything else, refer to the original documentation.
 
 Everything is built into a single, statically compiled binary file:
 
-- TCL interpreter
+- TCL 9 interpreter
 - Wapp framework
 - SQLite3 interface
 

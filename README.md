@@ -11,15 +11,17 @@ everything else, refer to the original documentation.
 
 **This fork is used to run [ufko.org](https://ufko.org)**
 
----
+--
 
 ## Advantages
 
-Everything is built-in ... in the single binary file:
+Everything is built into a single, statically compiled binary file:
 
 - TCL interpreter
 - Wapp framework
-- SQLite3 
+- SQLite3
+
+This means it could run in various environments, including jails, without external dependencies. The static compilation ensures portability and simplicity in deployment.
 
 ## Interpreter Changes  
 

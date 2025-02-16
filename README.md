@@ -19,7 +19,7 @@ Everything is built into a single, statically compiled binary file:
 
 - TCL interpreter
 - Wapp framework
-- SQLite3
+- SQLite3 interface
 
 This means it could run in various environments, **including jails**,
 without external dependencies.  The static compilation ensures

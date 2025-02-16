@@ -17,7 +17,7 @@
 CFLAGS = -Os -static
 CC = cc $(CFLAGS)
 OPTS = -DSQLITE_ENABLE_DESERIALIZE
-TCLDIR ?= /home/ivan/app/tcl
+TCLDIR ?= /home/${USER}/app/tcl
 TCLLIB = $(TCLDIR)/lib/libtcl90.a -lm -lz -lpthread
 TCLINC = $(TCLDIR)/include
 TCLSH = $(TCLDIR)/bin/tclsh9.0

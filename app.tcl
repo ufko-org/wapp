@@ -3,7 +3,7 @@
 # -- controllers
 #proc wapp-default {} {
 #	wapp-trim {
-#		hello
+#		%html([hello])
 #	}
 #}
 
@@ -15,7 +15,7 @@
 
 # -- helpers
 #proc hello {} {
-#	hello
+#	return "hello world"
 #}
 
 # -- etc ...

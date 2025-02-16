@@ -1,6 +1,8 @@
-**Wapp – Fork of wapp.tcl.tk**
+# wapp – Fork of wapp.tcl.tk
 
-This is a fork of wapp.tcl.tk, maintained independently with custom
-patches and updates. All changes will be documented in this README.md file.
+This is a fork of [wapp.tcl.tk](https://wapp.tcl.tk), maintained
+independently with custom patches and updates.  All changes will be
+documented in this *README.md* file.
 
-wapp-set-cookie now accepts cookie expiry time and secure flag.
+- **wapp-set-cookie** – Now accepts a cookie expiry time and a secure flag.
+- **wapptclsh** – Can be run as a shell (REPL).

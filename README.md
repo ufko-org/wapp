@@ -22,7 +22,10 @@ everything else, refer to the original documentation.
 - **markdown.tcl** – A modified version of the Tcllib Markdown processor
 with all external dependencies removed.  This ensures it runs
 independently within the Wapp framework.
-- **app.tcl** – A utility file for including reusable components or the entire application logic.  
+- **app.tcl** – A utility file for including reusable components or the
+entire application logic.  So if, for example, you often use the
+hello_world function in your projects and you expect not to change it
+frequently, you can place it right here :)
 
   If your entire application is included in `app.tcl`, then `index.cgi` only needs:  
 

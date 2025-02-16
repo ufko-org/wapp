@@ -1,4 +1,3 @@
-
 # wapp – Independent Fork of wapp.tcl.tk  
 
 This is an independent fork of [wapp.tcl.tk](https://wapp.tcl.tk),
@@ -7,7 +6,8 @@ that I personally need, whether in the interpreter or the API.  This
 fork is not meant to fix issues in the original project but simply to
 adapt it to my own use.  If someone finds these additions useful, they
 are welcome to use this version; otherwise, they can stick with the
-original.  All changes are documented in this *README.md* file.
+original.  My changes are documented in this *README.md* file.  For
+everything else, refer to the original documentation.
 
 ## Interpreter Changes  
 
@@ -15,16 +15,14 @@ original.  All changes are documented in this *README.md* file.
 
 - Can be used as an interactive shell (REPL) when run without arguments.  
 - `markdown.tcl` is compiled into it, enabling built-in Markdown processing.  
-- `app.tcl` is compiled into it, allowing easy inclusion of reusable
-application logic.
+- `app.tcl` is compiled into it, allowing easy inclusion of reusable application logic.  
 
 ## Additional Files  
 
 - **markdown.tcl** – A modified version of the Tcllib Markdown processor
 with all external dependencies removed.  This ensures it runs
 independently within the Wapp framework.
-- **app.tcl** – A utility file for including reusable components or the
-entire application logic.
+- **app.tcl** – A utility file for including reusable components or the entire application logic.  
 
   If your entire application is included in `app.tcl`, then `index.cgi` only needs:  
 
@@ -34,6 +32,12 @@ entire application logic.
   ```  
 
   This keeps `index.cgi` minimal and easier to maintain.  
+
+If you want to exclude these files from the compilation process, please
+edit the `Makefile` and `wapptclsh.c.in` file.  Note that I had to
+remove `-ldl` from `Makefile` because OpenBSD does not have `libdl`, and
+since I do not use other operating systems, I cannot test the `Makefile`
+on different platforms.
 
 ## API Changes  
 

@@ -15,10 +15,10 @@
 #
 
 CFLAGS = -Os -static
-CC = cc $(CFLAGS)
+CC = gcc $(CFLAGS)
 OPTS = -DSQLITE_ENABLE_DESERIALIZE
-TCLDIR ?= /home/ivan/app/tcl
-TCLLIB = $(TCLDIR)/lib/libtcl90.a -lm -lz -lpthread
+TCLDIR ?= /home/drh/tcl/tcl9
+TCLLIB = $(TCLDIR)/lib/libtcl9.0.a -lm -lz -lpthread -ldl
 TCLINC = $(TCLDIR)/include
 TCLSH = $(TCLDIR)/bin/tclsh9.0
 
@@ -27,7 +27,7 @@ all: wapptclsh
 wapptclsh: wapptclsh.c
 	$(CC) -I. -I$(TCLINC) -o $@ $(OPTS) wapptclsh.c $(TCLLIB)
 
-wapptclsh.c:	wapptclsh.c.in wapp.tcl app.tcl wapptclsh.tcl tclsqlite3.c mkccode.tcl
+wapptclsh.c:	wapptclsh.c.in wapp.tcl wapptclsh.tcl tclsqlite3.c mkccode.tcl
 	$(TCLSH) mkccode.tcl wapptclsh.c.in >$@
 
 clean:	

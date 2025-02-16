@@ -14,6 +14,8 @@
 #    (4)  make install
 #
 
+# This Makefile is for OpenBSD
+
 CFLAGS = -Os -static
 CC = cc $(CFLAGS)
 OPTS = -DSQLITE_ENABLE_DESERIALIZE

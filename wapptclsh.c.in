@@ -1,0 +1,71 @@
+/*
+** A TCLSH that reads itself as its initialization script.  This is
+** intended for use as CGI.  The CGI script should look like:
+**
+**      #/usr/bin/wapptclsh
+**      #
+**      proc wapp-default {} {
+**        wapp "<h1>Hello, World!</h1>\n"
+**      }
+**      wapp-start -cgi
+**
+*/
+#define SQLITE_THREADSAFE 0
+#undef SQLITE_ENABLE_COLUMN_METADATA
+#define SQLITE_OMIT_DECLTYPE 1
+#define SQLITE_OMIT_DEPRECATED 1
+#define SQLITE_OMIT_PROGRESS_CALLBACK 1
+#define SQLITE_OMIT_SHARED_CACHE 1
+#define SQLITE_DEFAULT_MEMSTATUS 0
+#define SQLITE_MAX_EXPR_DEPTH 0
+#define SQLITE_OMIT_LOAD_EXTENSION 1
+#define SQLITE_ENABLE_FTS4 1
+#define SQLITE_ENABLE_FTS5 1
+#define SQLITE_ENABLE_RTREE 1
+#define SQLITE_ENABLE_JSON1 1
+#define TCLSH_INIT_PROC wapptclsh_init_proc
+INCLUDE tclsqlite3.c
+
+/* The wapp.tcl script contains the useful web-application interface
+** procedures.  After loading this script, "package require wapp" becomes
+** a no-op
+*/
+static const char zWapp[] = 
+BEGIN_STRING
+INCLUDE $ROOT/wapp.tcl
+END_STRING
+;
+
+static const char zApp[] = 
+BEGIN_STRING
+INCLUDE $ROOT/app.tcl
+END_STRING
+;
+
+static const char zMarkdown[] = 
+BEGIN_STRING
+INCLUDE $ROOT/markdown.tcl
+END_STRING
+;
+
+/* This script runs to figure out what the main script should be.  It
+** loads the main script into a TCL variable named "main_script".  Or,
+** if an interactive shell is desired, "main_script" is unset.
+*/
+static const char zWappTclshInit[] = 
+BEGIN_STRING
+INCLUDE $ROOT/wapptclsh.tcl
+END_STRING
+;
+
+/*
+** Return the text of the script to run.  Or, return NULL to run an
+** interactive shell.
+*/
+const char *wapptclsh_init_proc(Tcl_Interp *interp){
+  Tcl_GlobalEval(interp, zWapp);  /* Load the wapp.tcl extension */
+  Tcl_GlobalEval(interp, zApp);  /* Load the app.tcl extension */
+  Tcl_GlobalEval(interp, zMarkdown);  /* Load the markdown.tcl extension */
+  Tcl_GlobalEval(interp, zWappTclshInit); /* Load the main loop script */
+  return Tcl_GetVar(interp, "main_script", TCL_GLOBAL_ONLY);
+}

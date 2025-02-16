@@ -21,7 +21,9 @@ Everything is built into a single, statically compiled binary file:
 - Wapp framework
 - SQLite3
 
-This means it could run in various environments, including jails, without external dependencies. The static compilation ensures portability and simplicity in deployment.
+This means it could run in various environments, **including jails**,
+without external dependencies.  The static compilation ensures
+portability and simplicity in deployment.
 
 ## Interpreter Changes  
 

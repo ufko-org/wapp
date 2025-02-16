@@ -1,3 +1,5 @@
+# This would normally be in index.cgi.
+
 # -- controllers
 #proc wapp-default {} {
 #	wapp-trim {

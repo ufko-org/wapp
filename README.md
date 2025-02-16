@@ -1,26 +1,58 @@
-# wapp – Fork of wapp.tcl.tk
 
-This is a fork of [wapp.tcl.tk](https://wapp.tcl.tk), maintained
-independently with custom patches and updates.  All changes will be
-documented in this *README.md* file.
+# wapp – Independent Fork of wapp.tcl.tk  
 
-If you use Makefile, app.tcl and markdown.tcl are compiled into the
-wapptclsh
+This is an independent fork of [wapp.tcl.tk](https://wapp.tcl.tk),
+maintained with custom patches and updates.  The goal is to add features
+that I personally need, whether in the interpreter or the API.  This
+fork is not meant to fix issues in the original project but simply to
+adapt it to my own use.  If someone finds these additions useful, they
+are welcome to use this version; otherwise, they can stick with the
+original.  All changes are documented in this *README.md* file.
 
-**wapp-set-cookie** – Now accepts a cookie expiry time and a secure flag.
+## Interpreter Changes  
 
-```
-Set examples:
+### **wapptclsh**  
+
+- Can be used as an interactive shell (REPL) when run without arguments.  
+- `markdown.tcl` is compiled into it, enabling built-in Markdown processing.  
+- `app.tcl` is compiled into it, allowing easy inclusion of reusable
+application logic.
+
+## Additional Files  
+
+- **markdown.tcl** – A modified version of the Tcllib Markdown processor
+with all external dependencies removed.  This ensures it runs
+independently within the Wapp framework.
+- **app.tcl** – A utility file for including reusable components or the
+entire application logic.
+
+  If your entire application is included in `app.tcl`, then `index.cgi` only needs:  
+
+  ```tcl
+  #!/path/to/wapptclsh
+  wapp-start $argv
+  ```  
+
+  This keeps `index.cgi` minimal and easier to maintain.  
+
+## API Changes  
+
+### `wapp-set-cookie`  
+
+Now supports setting an expiry time and a secure flag.  
+
+#### Setting Cookies  
+```tcl
 wapp-set-cookie session val
 wapp-set-cookie session-secure val 0 secure
 wapp-set-cookie timed val 3600
 wapp-set-cookie timed-secure val 3600 secure
+```
 
-Clear examples:
+#### Clearing Cookies  
+```tcl
 wapp-clear-cookie session
 wapp-clear-cookie session-secure "" -1 secure
 wapp-clear-cookie timed "" -1
 wapp-clear-cookie timed-secure "" -1 secure
 ```
-
-**wapptclsh** – Can be run as a shell (REPL) when invoked without arguments.

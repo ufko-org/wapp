@@ -13,6 +13,14 @@ everything else, refer to the original documentation.
 
 ---
 
+## Advantages
+
+Everything is built-in ... in the single binary file:
+
+- TCL interpreter
+- Wapp framework
+- SQLite3 
+
 ## Interpreter Changes  
 
 ### **wapptclsh**  

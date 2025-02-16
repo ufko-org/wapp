@@ -14,7 +14,7 @@
 #    (4)  make install
 #
 
-# This Makefile is for OpenBSD
+# This Makefile is for OpenBSD. There is no libdl. -ldl removed from linking.
 
 CFLAGS = -Os -static
 CC = cc $(CFLAGS)

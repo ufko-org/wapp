@@ -4,6 +4,9 @@ This is a fork of [wapp.tcl.tk](https://wapp.tcl.tk), maintained
 independently with custom patches and updates.  All changes will be
 documented in this *README.md* file.
 
+If you use Makefile, app.tcl and markdown.tcl are compiled into the
+wapptclsh
+
 **wapp-set-cookie** – Now accepts a cookie expiry time and a secure flag.
 
 ```

@@ -38,6 +38,9 @@ portability and simplicity in deployment.
 
 ## Additional Files  
 
+These files are optional.  If you want to exclude these files from the
+build process, please edit the `Makefile` and `wapptclsh.c.in` file.
+
 - **markdown.tcl** – A modified version of the Tcllib Markdown processor
 with all external dependencies removed.  This ensures it runs
 independently within the Wapp framework.
@@ -58,8 +61,8 @@ frequently, you can place it right here :)
 	- entire application code is outside of the document root
 	- deployment equals to copy new `wapptclsh` binary to the server
 
-If you want to exclude these files from the compilation process, please
-edit the `Makefile` and `wapptclsh.c.in` file.  
+
+## Makefile 
 
 Note that I had to remove `-ldl` from `Makefile` because OpenBSD does
 not have `libdl`, and since I do not use other operating systems, I

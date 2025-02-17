@@ -1,4 +1,4 @@
-# Wapp – Fork of wapp.tcl.tk  
+# Let's give wapp.tcl.tk a new dimension :)
 
 This is a fork of [wapp.tcl.tk](https://wapp.tcl.tk),
 maintained with custom changes and updates.  The goal is to add features

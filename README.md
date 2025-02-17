@@ -26,6 +26,24 @@ This means it could run in various environments, **including jails**,
 without external dependencies.  The static compilation ensures
 portability and simplicity in deployment.
 
+```
+$: wapp
+
+ _ _ _
+| | | |___ ___ ___
+| | | | .'| . | . |
+|_____|__,|  _|  _|
+          |_| |_|
+
+Wapp 1.0 shell using SQLite version 3.48.0 and TCL 9.0
+% Markdown::convert "# Heading1"
+<h1>Heading1</h1>
+% sqlite3 db :memory:
+% db one {select strftime("%Y-%m-%d %H:%M:%S")}
+2025-02-17 21:12:42
+%
+```
+
 ## Interpreter properties 
 
 ### **wapptclsh**  

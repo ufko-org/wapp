@@ -13,7 +13,7 @@ everything else, refer to the original documentation.
 
 --
 
-## Advantages of using wapp.tcl.tk
+## Advantages of using Wapp
 
 Everything is built into a single, statically compiled binary file:
 

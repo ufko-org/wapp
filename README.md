@@ -38,8 +38,9 @@ portability and simplicity in deployment.
 
 ## Additional Files  
 
-These files are optional.  If you want to exclude these files from the
-build process, please edit the `Makefile` and `wapptclsh.c.in` file.
+These files are optional and serve to demonstrate how to extend the
+functionality of `wapptclsh`.  If you want to exclude these files from
+the build process, please edit the `Makefile` and `wapptclsh.c.in` file.
 
 - **markdown.tcl** – A modified version of the Tcllib Markdown processor
 with all external dependencies removed.  This ensures it runs

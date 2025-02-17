@@ -25,13 +25,15 @@ This means it could run in various environments, **including jails**,
 without external dependencies.  The static compilation ensures
 portability and simplicity in deployment.
 
-## Interpreter Changes  
+## Interpreter properties 
 
 ### **wapptclsh**  
 
-- Can be used as an interactive shell (REPL) when run without arguments.  
-- `markdown.tcl` is compiled into it, enabling built-in Markdown processing.  
-- `app.tcl` is compiled into it, allowing easy inclusion of reusable application logic.  
+- Runs as an interactive shell (REPL) when executed without arguments.
+- Can be used for CLI scripting as an alternative to tclsh.
+- Functions as a CGI interpreter for writing web applications.
+- Includes markdown.tcl, enabling built-in Markdown processing.
+- Includes app.tcl, allowing easy inclusion of reusable application logic.
 
 ## Additional Files  
 

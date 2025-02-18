@@ -67,14 +67,17 @@ entire application logic.  So if, for example, you often use the
 hello_world function in your projects and you expect not to change it
 frequently, you can place it right here :)
 
-  If your entire application is included in `app.tcl`, then `index.cgi` only needs:  
+	If you use it for writing a web application, you can put all the
+  code that would normally be in, for example, index.cgi, into
+	app.tcl, and then index.cgi only contains:
 
   ```tcl
   #!/path/to/wapptclsh
   wapp-start $argv
   ```  
 
-  This keeps `index.cgi` minimal and easier to maintain. This also means that:
+	The application will then become part of the interpreter's binary with
+	these advantages:
 
 	- entire application code is outside of the document root
 	- deployment equals to copy new `wapptclsh` binary to the server

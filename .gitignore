@@ -1,3 +1,13 @@
 RCS/
-*.orig
+LICENSE
+Makefile
+Makefile.orig
+app.tcl
+markdown.tcl
+mkccode.tcl
+wapp.tcl
+wapp.tcl.orig
 wapptclsh
+wapptclsh.c
+wapptclsh.c.in
+wapptclsh.tcl

@@ -31,7 +31,6 @@ portability and simplicity in deployment.
 
 ```
 $: wapp
-
  _ _ _
 | | | |___ ___ ___
 | | | | .'| . | . |

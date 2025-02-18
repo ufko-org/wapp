@@ -51,8 +51,7 @@ Wapp 1.0 shell using SQLite version 3.48.0 and TCL 9.0
 - Runs as an interactive shell (REPL) when executed without arguments.
 - Can be used for CLI scripting as an alternative to tclsh.
 - Functions as a CGI interpreter for writing web applications.
-- Includes markdown.tcl, enabling built-in Markdown processing.
-- Includes app.tcl, allowing easy inclusion of reusable application logic.
+- Has a simple mechanism to compile any Tcl code into it.
 
 ## Additional Files  
 

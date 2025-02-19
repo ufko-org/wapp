@@ -12,7 +12,7 @@ This fork is used to run [ufko.org](https://ufko.org)
 
 --
 
-## Installation and Run Guide
+## Installation and running
 
 For the installation and running instructions, please follow these
 simple steps in this wiki page:   

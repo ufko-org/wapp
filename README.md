@@ -14,7 +14,7 @@ This fork is used to run [ufko.org](https://ufko.org)
 
 ## Advantages of using Wapp
 
-Everything is built into a single, statically compiled binary file:
+Everything is built into a single, statically built binary file:
 
 - TCL 9 interpreter
 - Wapp framework

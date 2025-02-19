@@ -8,7 +8,9 @@ original documentation: https://wapp.tcl.tk/home/doc/trunk/README.md
 
 It is possible you may achieve the same effect using Tcl's 9 zipfs, but
 my solution looks more compact and minimalistic to me, even though it
-has some limitations.
+has some limitations.  I believe Tcl's zipfs is more suited for desktop
+application deployment.
+
 
 --
 

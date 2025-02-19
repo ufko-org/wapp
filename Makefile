@@ -1,20 +1,7 @@
 #!/usr/bin/make
-#
-# Makefile for wapptclsh on unix.  Usage:
-#
-#    make clean wapptclsh TCLDIR=/home/drh/local
-#
-# You need a static build of TCL9 in the directory that TCLDIR specifies.
-# To construct such a build:
-#
-#    (1)  Download and untar the TCL9 sources
-#    (2)  CD into the unix subdirectory
-#    (3)  ./configure --disable-shared --prefix=/home/drh/local
-#                        change as appropriate -^^^^^^^^^^^^^^^
-#    (4)  make install
-#
 
 # This Makefile is for OpenBSD. There is no libdl. -ldl removed from linking.
+# See Makefile.orig
 
 CFLAGS = -Os -static
 CC = cc $(CFLAGS)

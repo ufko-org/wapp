@@ -92,9 +92,10 @@ frequently, you can place it right here :)
 
 ## Makefile 
 
-Note that I had to remove `-ldl` from `Makefile` because OpenBSD does
-not have `libdl`, and since I do not use other operating systems, I
-cannot test the `Makefile` on different platforms.
+Note that I had change the compiler from gcc to cc and remove `-ldl`
+from `Makefile` because OpenBSD does not have `libdl`, and since I do
+not use other operating systems, I cannot test the `Makefile` on
+different platforms.
 
 ## API Changes  
 

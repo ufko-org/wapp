@@ -95,11 +95,46 @@ For installation, thou shalt follow the next 10 commandments:
    $ make
    ```
 
-10. **Run Wapp Tcl shell**  
-    Once built, you can run the Wapp Tcl shell:
+10. **Run Wapp Tcl Shell**  
+    After a successful build and necessary file adjustments, you can run the Wapp Tcl shell, which allows you to test and use the application:
+
     ```sh
     $ ./wapptclsh
     ```
+
+    If you want to test a specific CGI page, modify the `index.cgi` file and add the necessary page definitions. For example, add the following to `index.cgi`:
+
+    ```tcl
+    wapp-default {} {
+        wapp-trim {
+            Hello world!
+        }
+    }
+
+    wapp-page-about {} {
+        wapp-trim {
+            This is the about page
+        }
+    }
+
+    wapp-page-env {} {
+        wapp-trim {
+            <h1>Environment state</h1>
+            <pre>%html([wapp-debug-env])</pre>
+        }
+    }
+    ```
+
+    Then, run the test server:
+
+    ```sh
+    $ ./wapptclsh index.cgi --server 8081
+    ```
+
+    After that, open your browser and visit the following URLs:
+    - [http://localhost:8081](http://localhost:8081) for the homepage.
+    - [http://localhost:8081/about](http://localhost:8081/about) for the "about" page.
+    - [http://localhost:8081/env](http://localhost:8081/env) for the environment page.
 
 ## Interpreter properties 
 

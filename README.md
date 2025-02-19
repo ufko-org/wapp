@@ -46,6 +46,61 @@ Wapp 1.0 shell using SQLite version 3.48.0 and TCL 9.0
 %
 ```
 
+## Wapp Fork Installation Guide
+
+For installation, thou shalt follow the next 10 commandments:
+
+1. **Download Tcl 9 source**  
+   Download **Tcl 9** source from [here](https://www.tcl-lang.org/software/tcltk/download.html).
+
+2. **Extract the archive**  
+   After downloading, extract the archive to your preferred directory.
+
+3. **Navigate to the `unix` directory**  
+   In the extracted directory, navigate to the `unix` folder:
+   ```sh
+   $ cd tcl9.0.1/unix
+   ```
+
+4. **Run the configuration script**  
+   Run the configuration script to configure Tcl:
+   ```sh
+   $ ./configure --disable-shared --prefix=/install/path
+   ```
+
+5. **Install Tcl**  
+   After configuring, install Tcl using:
+   ```sh
+   $ make install
+   ```
+
+6. **Clone the Wapp project**  
+   Clone the Wapp project repository:
+   ```sh
+   $ git clone https://github.com/ufko-org/wapp.git
+   ```
+
+7. **Enter the Wapp directory**  
+   Navigate to the Wapp project directory:
+   ```sh
+   $ cd wapp
+   ```
+
+8. **Edit the `Makefile`**  
+   Edit the `Makefile` to adjust paths, specify the compiler (`gcc` or `cc`), and add `-ldl` if needed.
+
+9. **Build the project**  
+   After editing the `Makefile`, build the project:
+   ```sh
+   $ make
+   ```
+
+10. **Run Wapp Tcl shell**  
+    Once built, you can run the Wapp Tcl shell:
+    ```sh
+    $ ./wapptclsh
+    ```
+
 ## Interpreter properties 
 
 ### **wapptclsh**  

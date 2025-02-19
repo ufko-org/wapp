@@ -12,6 +12,11 @@ This fork is used to run [ufko.org](https://ufko.org)
 
 --
 
+## Installation and Run Guide
+
+For the installation and test run, please follow the steps in this wiki page:  
+[Installation steps](https://github.com/ufko-org/wapp/wiki/Installation-steps)
+
 ## Advantages of using Wapp
 
 Everything is built into a single, statically built binary file:
@@ -41,11 +46,6 @@ Wapp 1.0 shell using SQLite version 3.50.0 and TCL 9.0
 2025-02-19 21:12:42
 %
 ```
-
-## Installation and Run Guide
-
-For the installation and test run, please follow the steps in this wiki page:  
-[Installation steps](https://github.com/ufko-org/wapp/wiki/Installation-steps)
 
 ## Interpreter properties 
 

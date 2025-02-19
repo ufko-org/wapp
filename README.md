@@ -15,8 +15,8 @@ This fork is used to run [ufko.org](https://ufko.org)
 ## Installation and Run Guide
 
 For the installation and running instructions, please follow these
-simple steps in this wiki page: [Installation
-steps](https://github.com/ufko-org/wapp/wiki/Installation-steps)
+simple steps in this wiki page:   
+[Installation steps](https://github.com/ufko-org/wapp/wiki/Installation-steps)
 
 ## Advantages of using Wapp
 

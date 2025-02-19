@@ -20,7 +20,7 @@ simple steps in this wiki page:
 
 ## Advantages of using Wapp
 
-Everything is built into a single, statically built binary file:
+Everything is built into a single, statically built (~3.7M stripped) binary file:
 
 - TCL 9 interpreter
 - Wapp framework

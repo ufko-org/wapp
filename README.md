@@ -32,7 +32,7 @@ without external dependencies.  The static compilation ensures
 portability and simplicity in deployment.
 
 ```
-$: wapp
+$: wapptclsh
  _ _ _
 | | | |___ ___ ___
 | | | | .'| . | . |

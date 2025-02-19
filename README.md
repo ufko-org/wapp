@@ -48,9 +48,9 @@ Wapp 1.0 shell using SQLite version 3.48.0 and TCL 9.0
 %
 ```
 
-## Installation Guide
+## Installation and Run Guide
 
-For the installation, please follow the steps in this wiki page:  
+For the installation and test run, please follow the steps in this wiki page:  
 [Installation steps](https://github.com/ufko-org/wapp/wiki/Installation-steps)
 
 ## Interpreter properties 

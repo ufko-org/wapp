@@ -1,7 +1,10 @@
 #!/usr/bin/make
 
 # This Makefile is for OpenBSD. There is no libdl. -ldl removed from linking.
-# See Makefile.orig
+# See: 
+#   Makefile.orig for Linux
+#   Makefile.macos for MacOS
+#   Makefile.msc for Windows
 
 CFLAGS = -Os -static
 CC = cc $(CFLAGS)

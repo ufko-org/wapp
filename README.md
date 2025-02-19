@@ -71,7 +71,7 @@ entire application logic.  So if, for example, you often use the
 hello_world function in your projects and you expect not to change it
 frequently, you can place it right here :)
 
-	If you use it for writing a web application, you can put all the
+	If you use Wapp for writing a web application, you can put all the
   code that would normally be in, for example, `index.cgi`, into
 	`app.tcl`, and then `index.cgi` only contains:
 

@@ -38,7 +38,7 @@ Wapp 1.0 shell using SQLite version 3.50.0 and TCL 9.0
 <h1>Heading1</h1>
 % sqlite3 db :memory:
 % db one {select strftime("%Y-%m-%d %H:%M:%S")}
-2025-02-17 21:12:42
+2025-02-19 21:12:42
 %
 ```
 

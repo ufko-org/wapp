@@ -6,12 +6,6 @@ personally need, whether in the interpreter or the API.  My changes are
 documented in this *README.md* file.  For everything else, refer to the
 original documentation: https://wapp.tcl.tk/home/doc/trunk/README.md
 
-It is possible you may achieve the same effect using Tcl's 9 zipfs, but
-my solution looks more compact and minimalistic to me, even though it
-has some limitations.  I believe Tcl's zipfs is more suited for desktop
-application deployment.
-
-
 --
 
 This fork is used to run [ufko.org](https://ufko.org)

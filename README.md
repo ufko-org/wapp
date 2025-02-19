@@ -33,7 +33,7 @@ $: wapp
 |_____|__,|  _|  _|
           |_| |_|
 
-Wapp 1.0 shell using SQLite version 3.48.0 and TCL 9.0
+Wapp 1.0 shell using SQLite version 3.50.0 and TCL 9.0
 % Markdown::convert "# Heading1"
 <h1>Heading1</h1>
 % sqlite3 db :memory:

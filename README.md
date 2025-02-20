@@ -113,7 +113,7 @@ different platforms.
 ### `proc datetime`
 
 Added as a replacement for the missing 'clock' command and for
-convenience.
+convenience.  
 See: [functions.tcl](https://github.com/ufko-org/wapp/blob/main/functions.tcl), proc datetime
 
 ### `proc wapp-set-cookie`  

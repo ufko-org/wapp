@@ -24,11 +24,11 @@
 proc datetime {{fmt "%Y-%m-%d %H:%M:%S"} {mods "'now', 'localtime'"}} {
   set sql "SELECT strftime('$fmt', $mods);"
   if {[info commands db] eq "db"} {
-    set result [db eval $sql]
+    set result [db one $sql]
     return $result
   } else {
     sqlite3 __db :memory:
-    set result [__db eval $sql]
+    set result [__db one $sql]
     __db close
     return $result
   }

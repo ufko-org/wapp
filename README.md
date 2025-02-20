@@ -101,11 +101,11 @@ different platforms.
 
 ## Changelog  
 
-### `datetime`
+### `proc datetime`
 
 Added as a replacement for the missing 'clock' command and for convenience.
 
-### `wapp-set-cookie`  
+### `proc wapp-set-cookie`  
 
 Now supports setting an expiry time and a secure flag.  
 
@@ -117,7 +117,7 @@ wapp-set-cookie timed val 3600
 wapp-set-cookie timed-secure val 3600 secure
 ```
 
-### `wapp-clear-cookie`  
+### `proc wapp-clear-cookie`  
 
 #### Clearing Cookies  
 ```tcl

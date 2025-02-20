@@ -94,7 +94,7 @@ from `Makefile` because OpenBSD does not have `libdl`, and since I do
 not use other operating systems, I cannot test the `Makefile` on
 different platforms.
 
-## API Changes  
+## Changelog  
 
 ### `wapp-set-cookie`  
 
@@ -107,6 +107,8 @@ wapp-set-cookie session-secure val 0 secure
 wapp-set-cookie timed val 3600
 wapp-set-cookie timed-secure val 3600 secure
 ```
+
+### `wapp-clear-cookie`  
 
 #### Clearing Cookies  
 ```tcl

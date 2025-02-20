@@ -63,7 +63,11 @@ These files are optional and serve to demonstrate how to extend the
 functionality of `wapptclsh`.  If you want to exclude these files from
 the build process, please edit the `Makefile` and `wapptclsh.c.in` file.
 
-- **functions.tcl** - ...
+- **functions.tcl** - A collection of useful, custom functions that 
+extend the core capabilities of wapptclsh. These functions can simplify 
+common tasks and improve the usability of your projects. This file serves 
+as a great starting point for adding your own helper functions or utilities 
+to enhance the Tcl environment within Wapp.
 - **markdown.tcl** – A modified version of the Tcllib Markdown processor
 with all external dependencies removed.  This ensures it runs
 independently within the Wapp framework.

@@ -14,7 +14,7 @@ This fork is used to run [ufko.org](https://ufko.org/env)
 
 ## Why not zipfs
 
-zipfs problem is explained [here in discussion](https://github.com/ufko-org/wapp/discussions/6)
+My opinion on zipfs is explained [here in discussion](https://github.com/ufko-org/wapp/discussions/6)
 
 ## Installation and running
 

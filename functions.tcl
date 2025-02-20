@@ -38,3 +38,50 @@ proc datetime {{fmt "%Y-%m-%d %H:%M:%S"} {mods "'now', 'localtime'"}} {
     return $result
   }
 }
+
+# ---------------------------------------------------------------------
+# Function: parray
+# Displays the contents of an array with custom formatting. This function
+# allows filtering by key and/or value. It is useful when working with
+# Tcl arrays, providing a convenient way to format and display array data
+# with optional key and value filters.
+#
+# Parameters:
+#  - arrayName: The name of the array (passed by reference).
+#  - keyfilter: A pattern used to filter the array keys 
+#    default is '*', meaning no filtering
+#  - valuefilter: A pattern used to filter the array values 
+#    default is '*', meaning no filtering
+#
+# Usage examples:
+# parray myArray
+# parray myArray "ba*"
+# parray myArray "*" "value*"
+# parray myArray "key1" "value1"
+# ---------------------------------------------------------------------
+proc parray {arrayName {keyfilter *} {valuefilter *}} {
+  upvar 1 $arrayName __a
+  if {![array exists __a]} {
+    return -code error "\"$arrayName\" isn't an array"
+  }
+
+  set maxl 0
+  set names [lsort [array names __a $keyfilter]]
+
+  # Find the maximum name length
+  foreach name $names {
+    if {[string length $name] > $maxl} {
+      set maxl [string length $name]
+    }
+  }
+
+  set maxl [expr {$maxl + [string length $arrayName] + 2}]
+
+  # Display the array with custom formatting
+  foreach name $names {
+		if {[string match -nocase "$valuefilter" $__a($name)]} {
+			set key_string [format %s(%s) $arrayName $name]
+			puts stdout [format "%-*s = %s" $maxl $key_string $__a($name)]
+		}
+  }
+}

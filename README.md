@@ -32,7 +32,8 @@ without external dependencies.  The static compilation ensures
 portability and simplicity in deployment.
 
 ```
-$: wapptclsh
+$: ./wapptclsh
+
  _ _ _
 | | | |___ ___ ___
 | | | | .'| . | . |
@@ -42,9 +43,10 @@ $: wapptclsh
 Wapp 1.0 shell using SQLite version 3.50.0 and TCL 9.0
 % Markdown::convert "# Heading1"
 <h1>Heading1</h1>
-% sqlite3 db :memory:
-% db one {select strftime("%Y-%m-%d %H:%M:%S")}
-2025-02-19 21:12:42
+% datetime "%Y-%m-%d %H:%M:%S" "'now', '+1 day'"
+2025-02-21 07:06:50
+% datetime "%Y-%m-%d %H:%M:%S" "'now', '+1 day', 'localtime'"
+2025-02-21 08:07:13
 %
 ```
 

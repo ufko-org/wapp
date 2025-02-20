@@ -50,7 +50,7 @@ proc datetime {{fmt "%Y-%m-%d %H:%M:%S"} {mods "'now', 'localtime'"}} {
 #  - arrayName: The name of the array (passed by reference).
 #  - keyfilter: A pattern used to filter the array keys 
 #    default is '*', meaning no filtering
-#  - valuefilter: A pattern used to filter the array values 
+#  - valuefilter: A nocase pattern used to filter the array values 
 #    default is '*', meaning no filtering
 #
 # Usage examples:

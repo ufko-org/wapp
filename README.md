@@ -79,32 +79,34 @@ independently within the Wapp framework. The markdown.tcl code could be
 moved to functions.tcl, but since it is extensive, I decided to keep it 
 in a separate file. Finally, not everyone needs markdown processing, 
 so it makes sense.
-- **app.tcl** – A utility file for include the entire application into 
-interpreter's binary after rebuild 
+- **app.tcl** – A utility file for including the entire application in 
+the interpreter binary. After modifying `app.tcl`, 
+**you need to rebuild the binary** to include the changes.
 
-	If you use Wapp for writing a CLI application, you can put all the
-	code that would be normally run as:  
-	```
-	wapptclsh myscript.tcl
-	```
-	into `app.tcl` and implement function `main` in this file which runs 
-	automatically instead of interactive shell.
+If you use Wapp for writing a CLI application, you can move all the code
+that would normally be run with:
 
-	If you use Wapp for writing a web application, you can put all the
-  code that would normally be in, for example, `index.cgi`, into
-	`app.tcl`, and then `index.cgi` only contains:
+```sh
+wapptclsh myscript.tcl
+```  
 
-  ```tcl
-  #!/path/to/wapptclsh
-  wapp-start $argv
-  ```  
+into `app.tcl` and implement the `main` function there.  It will then
+run automatically instead of the interactive shell.
 
-	The application will then become part of the interpreter's binary with
-	these advantages:
+If you use Wapp for writing a web application, you can move the code
+from the main file (e.g., `index.cgi`) into `app.tcl`.  Then,
+`index.cgi` can be simplified to:
 
-	- entire application code is outside of the document root
-	- deployment equals to copy new `wapptclsh` binary to the server
+```sh
+#!/path/to/wapptclsh
+wapp-start $argv
+```  
 
+This way, you **can** ship the entire web application as
+part of the interpreter binary, bringing these advantages:
+
+- The entire application code is outside the document root.  
+- Deployment is just a matter of copying the new `wapptclsh` binary to the server.
 
 ## Makefile 
 

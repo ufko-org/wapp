@@ -79,10 +79,8 @@ independently within the Wapp framework. The markdown.tcl code could be
 moved to functions.tcl, but since it is extensive, I decided to keep it 
 in a separate file. Finally, not everyone needs markdown processing, 
 so it makes sense.
-- **app.tcl** – A utility file for including reusable components or the
-entire application logic.  So if, for example, you often use the
-hello_world function in your projects and you expect not to change it
-frequently, you can place it right here :)
+- **app.tcl** – A utility file for entire application into interpreter's 
+sbinary.  
 
 	If you use Wapp for writing a web application, you can put all the
   code that would normally be in, for example, `index.cgi`, into

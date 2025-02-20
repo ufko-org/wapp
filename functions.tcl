@@ -3,8 +3,10 @@
 
 # ---------------------------------------------------------------------
 # Function: datetime
-# Added as a replacement for the missing 'clock' command 
-# and for convenience.
+# Added as a replacement for the missing 'clock' command and for 
+# convenience. Function is platform-independent, which is especially 
+# useful when working in environments like jails or on systems where 
+# external tools (like date) are not available.
 # See: https://www.sqlite.org/lang_datefunc.html
 #
 # Parameters:

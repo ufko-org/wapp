@@ -22,7 +22,7 @@ For the installation and running instructions, please follow these
 simple steps in this wiki page:   
 [Installation steps](https://github.com/ufko-org/wapp/wiki/Installation-steps)
 
-## Advantages of using Wapp
+## Advantages of using Wapp instead of tclsh
 
 Everything is built into a single, statically built (~3.7M stripped in my case) binary file:
 
@@ -53,8 +53,6 @@ Wapp 1.0 shell using SQLite version 3.50.0 and TCL 9.0
 2025-02-21 08:07:13
 %
 ```
-
-## Interpreter properties 
 
 ### **wapptclsh**  
 

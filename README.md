@@ -58,10 +58,11 @@ Wapp 1.0 shell using SQLite version 3.50.0 and TCL 9.0
 
 ### **wapptclsh**  
 
+- Is a pure C program, while the static tclsh is a ZipFS binary.
 - Runs as an interactive shell (REPL) when executed without arguments.
 - Can be used for CLI scripting as an alternative to tclsh.
 - Functions as a CGI interpreter for writing web applications.
-- Has a simple mechanism to compile any Tcl code into it.
+- Includes a straightforward mechanism for compiling any Tcl code directly into it
 
 ## Additional Files  
 

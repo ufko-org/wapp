@@ -220,6 +220,7 @@ lsort
 namespace
 open
 package
+parray
 pid
 proc
 puts

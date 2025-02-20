@@ -83,30 +83,30 @@ so it makes sense.
 the interpreter binary. After modifying `app.tcl`, 
 **you need to rebuild the binary** to include the changes.
 
-If you use Wapp for writing a CLI application, you can move all the code
-that would normally be run with:
+	If you use Wapp for writing a CLI application, you can move all the code
+	that would normally be run with:
 
-```sh
-wapptclsh myscript.tcl
-```  
+	```sh
+	wapptclsh myscript.tcl
+	```  
 
-into `app.tcl` and implement the `main` function there.  It will then
-run automatically instead of the interactive shell.
+	into `app.tcl` and implement the `main` function there.  It will then
+	run automatically instead of the interactive shell.
 
-If you use Wapp for writing a web application, you can move the code
-from the main file (e.g., `index.cgi`) into `app.tcl`.  Then,
-`index.cgi` can be simplified to:
+	If you use Wapp for writing a web application, you can move the code
+	from the main file (e.g., `index.cgi`) into `app.tcl`.  Then,
+	`index.cgi` can be simplified to:
 
-```sh
-#!/path/to/wapptclsh
-wapp-start $argv
-```  
+	```sh
+	#!/path/to/wapptclsh
+	wapp-start $argv
+	```  
 
-This way, you **can** ship the entire web application as
-part of the interpreter binary, bringing these advantages:
+	This way, you **can** ship the entire web application as
+	part of the interpreter binary, bringing these advantages:
 
-- The entire application code is outside the document root.  
-- Deployment is just a matter of copying the new `wapptclsh` binary to the server.
+	- The entire application code is outside the document root.  
+	- Deployment is just a matter of copying the new `wapptclsh` binary to the server.
 
 ## Makefile 
 

@@ -8,7 +8,7 @@ original documentation: https://wapp.tcl.tk/home/doc/trunk/README.md
 
 --
 
-This fork is used to run [ufko.org](https://ufko.org)
+This fork is used to run [ufko.org](https://ufko.org/env)
 
 --
 

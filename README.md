@@ -101,6 +101,10 @@ different platforms.
 
 ## Changelog  
 
+### `datetime`
+
+Added as a replacement for the missing 'clock' command and for convenience.
+
 ### `wapp-set-cookie`  
 
 Now supports setting an expiry time and a secure flag.  

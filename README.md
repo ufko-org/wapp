@@ -105,7 +105,8 @@ different platforms.
 
 ### `proc datetime`
 
-Added as a replacement for the missing 'clock' command and for convenience.
+Added as a replacement for the missing 'clock' command and for
+convenience.
 
 ### `proc wapp-set-cookie`  
 

@@ -1,5 +1,10 @@
 # These are functions that I think are useful for everyday use. 
+# Not all functions in this file may have the most optimized 
+# implementation, but I guarantee that they work as intended. 
+# The focus is on functionality first, and improvements can be 
+# made over time to enhance performance.
 # ---------------------------------------------------------------------
+
 
 # ---------------------------------------------------------------------
 # Function: datetime

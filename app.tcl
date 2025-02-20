@@ -19,4 +19,3 @@
 #}
 
 # -- etc ...
-puts hello

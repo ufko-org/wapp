@@ -72,7 +72,9 @@ as a great starting point for adding your own helper functions or utilities
 to enhance the Tcl environment within Wapp.
 - **markdown.tcl** – A modified version of the Tcllib Markdown processor
 with all external dependencies removed.  This ensures it runs
-independently within the Wapp framework.
+independently within the Wapp framework. The markdown.tcl code could be 
+moved to functions.tcl, but since it is extensive, I decided to keep it 
+in a separate file.
 - **app.tcl** – A utility file for including reusable components or the
 entire application logic.  So if, for example, you often use the
 hello_world function in your projects and you expect not to change it

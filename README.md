@@ -63,6 +63,7 @@ These files are optional and serve to demonstrate how to extend the
 functionality of `wapptclsh`.  If you want to exclude these files from
 the build process, please edit the `Makefile` and `wapptclsh.c.in` file.
 
+- **functions.tcl** - ...
 - **markdown.tcl** – A modified version of the Tcllib Markdown processor
 with all external dependencies removed.  This ensures it runs
 independently within the Wapp framework.
@@ -137,6 +138,7 @@ continue
 coroinject
 coroprobe
 coroutine
+datetime
 dict
 encoding
 eof

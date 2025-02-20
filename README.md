@@ -79,8 +79,16 @@ independently within the Wapp framework. The markdown.tcl code could be
 moved to functions.tcl, but since it is extensive, I decided to keep it 
 in a separate file. Finally, not everyone needs markdown processing, 
 so it makes sense.
-- **app.tcl** – A utility file for entire application into interpreter's 
-sbinary.  
+- **app.tcl** – A utility file for include the entire application into 
+interpreter's binary after rebuild 
+
+	If you use Wapp for writing a CLI application, you can put all the
+	code that would be normally run as:  
+	```
+	wapptclsh myscript.tcl
+	```
+	into `app.tcl` and implement function `main` in this file which runs 
+	automatically instead of interactive shell.
 
 	If you use Wapp for writing a web application, you can put all the
   code that would normally be in, for example, `index.cgi`, into

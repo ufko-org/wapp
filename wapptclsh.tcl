@@ -3,6 +3,10 @@
 proc initialize_wapptclsh {} {
   global argv argv0 main_script
   if {[llength $argv]==0} {
+		if {[info commands main] eq "main"} {
+			main
+			exit
+		} 
 		puts "
  _ _ _             
 | | | |___ ___ ___ 

@@ -71,7 +71,7 @@ Hello web!
 - Runs as an interactive shell (REPL) when executed without arguments.
 - Can be used for CLI scripting as an alternative to tclsh.
 - Functions as a CGI interpreter for writing web applications.
-- Includes a straightforward mechanism for compiling any Tcl code directly into it
+- Easily compiles any Tcl code directly into the executable.
 
 ## Additional Files  
 

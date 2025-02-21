@@ -66,8 +66,8 @@ Hello web!
 
 ### **wapptclsh**  
 
+- Is a pure C program with zero dependencies, no external libraries required 
 - Runs seamlessly on Unix, Linux, macOS, and Windows, making it a truly portable solution.
-- Is a pure C program, while the static tclsh is a ZipFS binary first and only then a C program :)
 - Runs as an interactive shell (REPL) when executed without arguments.
 - Can be used for CLI scripting as an alternative to tclsh.
 - Functions as a CGI interpreter for writing web applications.

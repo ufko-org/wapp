@@ -1,4 +1,4 @@
-# Let's give wapp.tcl.tk a new dimension
+# CLI and Web scripting with Tcl soul
 
 This is a fork of [wapp.tcl.tk](https://wapp.tcl.tk), maintained with
 custom changes and updates.  The goal is to add features that I
@@ -11,10 +11,6 @@ original documentation: https://wapp.tcl.tk/home/doc/trunk/README.md
 This fork is used to run [ufko.org](https://ufko.org/env)
 
 --
-
-## Why not zipfs
-
-My opinion on zipfs is explained [here in discussion](https://github.com/ufko-org/wapp/discussions/6)
 
 ## Installation and running
 

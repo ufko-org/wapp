@@ -123,6 +123,11 @@ different platforms.
 
 ## Changelog  
 
+### `proc test`
+
+Added as a no-nonsense test helper. Takes an expected value—either 
+a fixed one or a regex wrapped in //. Ditch the bloated test suites.
+
 ### `proc parray`
 
 Added as a replacement for the missing `parray` command and for

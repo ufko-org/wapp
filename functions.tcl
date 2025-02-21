@@ -87,9 +87,10 @@ proc parray {arrayName {keyfilter *} {valuefilter *}} {
   }
 }
 
-# this is work in progress. not for cryptography, enough for
-# session keys, tokens, password salts in the web app
+# This is a work in progress. not for cryptography :D 
+# good for session keys, tokens, password salts in the web app
 # puts [time {randhex 16}]
+
 proc randhex {{length 16}} {
     set result ""
     for {set i 0} {$i < $length} {incr i} {

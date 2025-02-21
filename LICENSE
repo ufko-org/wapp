@@ -1,12 +1,13 @@
-License for the original code (wapp.tcl.tk):
-This project is licensed under the BSD-2-Clause License.
-
-License for markdown.tcl
-This file is licensed under MIT License.
-
 License for this fork:
 All changes in this fork are dedicated to the public domain under the
 CC0 1.0 Universal (Public Domain Dedication).  You can copy, modify,
 distribute and perform the work, even for commercial purposes, without
 asking permission.  For more details, visit:
 https://creativecommons.org/publicdomain/zero/1.0/
+
+License for the original code (wapp.tcl.tk/wapp.tcl):
+This project is licensed under the BSD-2-Clause License.
+
+License for markdown.tcl
+This file is licensed under MIT License.
+

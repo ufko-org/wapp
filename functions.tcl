@@ -140,7 +140,7 @@ proc test {name body {expected {}}} {
 }
 
 # ---------------------------------------------------------------------
-# This is a work in progress. not for cryptography :D 
+# This is a work in progress. Not for cryptography :) 
 # good for session keys, tokens, password salts in the web app
 # puts [time {randhex 16}]
 # ---------------------------------------------------------------------

@@ -39,15 +39,6 @@ proc datetime {{fmt "%Y-%m-%d %H:%M:%S"} {mods "'now', 'localtime'"}} {
   }
 }
 
-proc randhex {{length 16}} {
-		# puts [time {randhex 16}]
-    set result ""
-    for {set i 0} {$i < $length} {incr i} {
-        set randByte [expr {int(rand() * 256)}]
-        append result [format "%02x" $randByte]
-    }
-    return $result
-}
 
 # ---------------------------------------------------------------------
 # Function: parray
@@ -94,4 +85,16 @@ proc parray {arrayName {keyfilter *} {valuefilter *}} {
 			puts stdout [format "%-*s = %s" $maxl $key_string $__a($name)]
 		}
   }
+}
+
+# this is work in progress. not for cryptography, enough for
+# session keys, tokens, password salts in the web app
+proc randhex {{length 16}} {
+		# puts [time {randhex 16}]
+    set result ""
+    for {set i 0} {$i < $length} {incr i} {
+        set randByte [expr {int(rand() * 256)}]
+        append result [format "%02x" $randByte]
+    }
+    return $result
 }

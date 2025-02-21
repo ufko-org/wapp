@@ -14,7 +14,7 @@
 # external tools (like date) are not available.
 # See: https://www.sqlite.org/lang_datefunc.html
 #
-# Parameters:
+# Arguments:
 #  - format: The datetime format (uses SQLite's strftime format)
 #            Defaults to ISO 8601 (YYYY-MM-DD HH:MM:SS)
 #  - mods:   Modifiers (uses SQLite's date time modifiers)
@@ -46,7 +46,7 @@ proc datetime {{fmt "%Y-%m-%d %H:%M:%S"} {mods "'now', 'localtime'"}} {
 # Tcl arrays, providing a convenient way to format and display array data
 # with optional key and value filters.
 #
-# Parameters:
+# Arguments:
 #  - arrayName: The name of the array (passed by reference).
 #  - keyfilter: A pattern used to filter the array keys 
 #    default is '*', meaning no filtering
@@ -108,7 +108,7 @@ proc parray {arrayName {keyfilter *} {valuefilter *}} {
 #   testbody
 # } {expected}
 #
-# The body is a block of Tcl code that will be evaluated, and the 
+# The testbody is a block of Tcl code that will be evaluated, and the 
 # result is compared to the expected value (expected). 
 # If the comparison passes, the test is marked as "PASS"; otherwise, 
 # it will be marked as "FAIL". 
@@ -140,16 +140,36 @@ proc test {testname testbody {expected {}}} {
 }
 
 # ---------------------------------------------------------------------
-# This is a work in progress. Not for cryptography :) 
-# good for session keys, tokens, password salts in the web app
-# puts [time {randhex 16}]
+# Function: randhex 
+# Generates a random hexadecimal string using SQLite if available,  
+# otherwise falls back to an in-memory SQLite instance.  
+#  
+# Arguments:  
+# length (default: 16) - Number of random bytes to generate.  
+#                        Each byte is converted to 2 hex characters,  
+#                        so the output length is length * 2 characters.  
+#  
+# Behavior:  
+#   - If the global "db" command exists (assumed to be an active SQLite connection),  
+#     it is used directly for efficiency.  
+#   - If "db" does not exist, a temporary SQLite database is created in RAM  
+#     to execute the query, which adds some overhead (~3 ms in my case).  
+#  
+# Notes:  
+#   - SQLite's randomblob() provides high-quality randomness,  
+#     superior to Tcl's built-in rand().  
+#   - Optimized for web applications where an active database connection is 
+#      usually available.  
 # ---------------------------------------------------------------------
-
 proc randhex {{length 16}} {
-    set result ""
-    for {set i 0} {$i < $length} {incr i} {
-        set randByte [expr {int(rand() * 256)}]
-        append result [format "%02x" $randByte]
-    }
+	set sql "SELECT lower(hex(randomblob($length)))"
+  if {[info commands db] eq "db"} {
+    set result [db one $sql]
     return $result
+  } else {
+    sqlite3 __db :memory:
+    set result [__db one $sql]
+    __db close
+    return $result
+  }
 }

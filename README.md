@@ -132,7 +132,7 @@ different platforms.
 
 ## Changelog  
 
-### `proc randhex'
+### `proc randhex`
 
 Added to generates a random hexadecimal string using SQLite’s randomblob() 
 for top-notch randomness.

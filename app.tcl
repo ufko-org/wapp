@@ -4,4 +4,3 @@
 
 # See: 
 # https://github.com/ufko-org/wapp/blob/main/README.md
-proc main {} { puts "hello world" }

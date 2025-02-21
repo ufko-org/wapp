@@ -61,6 +61,7 @@ $: echo 'proc main {} { puts "All in one" }' >> app.tcl && make
 $: ./wapptclsh
 All in one
 
+$: echo 'proc wapp-default {} { wapp-trim { Hello web! } }; wapp-start $argv' > index.cgi
 $: ./wapptclsh index.cgi --server 8082
 Listening for HTTP requests on TCP port 8082
 ```

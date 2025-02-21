@@ -151,9 +151,9 @@ proc test {testname testbody {expected {}}} {
 #  
 # Behavior:  
 #   - If the global "db" command exists (assumed to be an active SQLite connection),  
-#     it is used directly for efficiency.  
+#     it is used directly for efficiency. (~35 µs in my case) 
 #   - If "db" does not exist, a temporary SQLite database is created in RAM  
-#     to execute the query, which adds some overhead (~3 ms in my case).  
+#     to execute the query, which adds some overhead (~2500 µs in my case).  
 #  
 # Notes:  
 #   - SQLite's randomblob() provides high-quality randomness,  

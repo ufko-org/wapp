@@ -66,23 +66,23 @@ proc parray {arrayName {keyfilter *} {valuefilter *}} {
     return -code error "Variable: \"$arrayName\" isn't an array"
   }
 
-  set maxl 0
+  set maxlen 0
   set names [lsort [array names __a $keyfilter]]
 
   # Find the maximum name length
   foreach name $names {
-    if {[string length $name] > $maxl} {
-      set maxl [string length $name]
+    if {[string length $name] > $maxlen} {
+      set maxlen [string length $name]
     }
   }
 
-  set maxl [expr {$maxl + [string length $arrayName] + 2}]
+  set maxlen [expr {$maxlen + [string length $arrayName] + 2}]
 
   # Display the array with custom formatting
   foreach name $names {
 		if {[string match -nocase "$valuefilter" $__a($name)]} {
 			set key_string [format %s(%s) $arrayName $name]
-			puts stdout [format "%-*s = %s" $maxl $key_string $__a($name)]
+			puts stdout [format "%-*s = %s" $maxlen $key_string $__a($name)]
 		}
   }
 }

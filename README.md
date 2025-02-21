@@ -56,6 +56,11 @@ Wapp 1.0 shell using SQLite version 3.50.0 and TCL 9.0
 $: ./wapptclsh script.tcl
 Hello World!
 
+Implement proc main in the app.tcl and ship it as single file
+$: echo 'proc main {} { puts "All in one" }' >> app.tcl && make
+$: ./wapptclsh
+All in one
+
 $: ./wapptclsh index.cgi --server 8082
 Listening for HTTP requests on TCP port 8082
 ```

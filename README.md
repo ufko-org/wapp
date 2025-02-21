@@ -252,6 +252,7 @@ pid
 proc
 puts
 pwd
+randhex
 read
 regexp
 regsub

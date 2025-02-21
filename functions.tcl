@@ -104,8 +104,8 @@ proc parray {arrayName {keyfilter *} {valuefilter *}} {
 #    match the expected value exactly.
 # ---------------------------------------------------------------------
 # Usage:
-# test name {
-#   body
+# test testname {
+#   testbody
 # } {expected}
 #
 # The body is a block of Tcl code that will be evaluated, and the 
@@ -113,9 +113,9 @@ proc parray {arrayName {keyfilter *} {valuefilter *}} {
 # If the comparison passes, the test is marked as "PASS"; otherwise, 
 # it will be marked as "FAIL". 
 # ---------------------------------------------------------------------
-proc test {name body {expected {}}} {
+proc test {testname testbody {expected {}}} {
   set fail_line 0
-  set result [eval $body]
+  set result [eval $testbody]
   
 	# Check if we want a regexp comparison; the expected value 
 	# is between / and /
@@ -123,18 +123,18 @@ proc test {name body {expected {}}} {
     # Perform regexp comparison
 		set expected [string range $expected 1 end-1] ;# remove the slashes
     if {[regexp "^${expected}\$" $result]} {
-      puts "PASS: $name"
+      puts "PASS: $testname"
     } else {
       set fail_line [lindex [info frame -1] 3]
-      puts "FAIL: $name, want: $expected, got: $result line: $fail_line"
+      puts "FAIL: $testname, want: $expected, got: $result line: $fail_line"
     }
   } else {
     # Perform simple string comparison
     if { $result eq $expected } {
-      puts "PASS: $name"
+      puts "PASS: $testname"
     } else {
       set fail_line [lindex [info frame -1] 3]
-      puts "FAIL: $name, want: $expected, got: $result line: $fail_line"
+      puts "FAIL: $testname, want: $expected, got: $result line: $fail_line"
     }
   }
 }

@@ -39,7 +39,6 @@ proc datetime {{fmt "%Y-%m-%d %H:%M:%S"} {mods "'now', 'localtime'"}} {
   }
 }
 
-
 # ---------------------------------------------------------------------
 # Function: parray
 # Displays the contents of an array with custom formatting. This function
@@ -84,6 +83,59 @@ proc parray {arrayName {keyfilter *} {valuefilter *}} {
 			set key_string [format %s(%s) $arrayName $name]
 			puts stdout [format "%-*s = %s" $maxlen $key_string $__a($name)]
 		}
+  }
+}
+
+# ---------------------------------------------------------------------
+# Function: test
+# My simple test suite :) It's sufficient for most use cases where
+# you don't need advanced features. It's lightweight, easy to use, 
+# and it can handle basic test scenarios well. The function is flexible 
+# enough for quick testing of functions, commands, and database 
+# interactions. If you're looking for something simple and effective, 
+# this is the way to go!
+# 
+# The test suite supports two types of comparison:
+# 1. `regexp`: If the expected value is wrapped in slashes (`/`), 
+#    a regular expression comparison is performed. This allows 
+#    flexibility when you need to match patterns in the result.
+# 2. `eq`: If the expected value is not wrapped in slashes, 
+#    a direct string comparison is used, meaning the result must
+#    match the expected value exactly.
+# ---------------------------------------------------------------------
+# Usage:
+# test name {
+#   body
+# } {expected}
+#
+# The body is a block of Tcl code that will be evaluated, and the 
+# result is compared to the expected value (expected). 
+# If the comparison passes, the test is marked as "PASS"; otherwise, 
+# it will be marked as "FAIL". 
+# ---------------------------------------------------------------------
+proc test {name body {expected {}}} {
+  set fail_line 0
+  set result [eval $body]
+  
+	# Check if we want a regexp comparison; the expected value 
+	# is between / and /
+  if {[regexp {^/.*/$} $expected]} {
+    # Perform regexp comparison
+		set expected [string range $expected 1 end-1] ;# remove the slashes
+    if {[regexp "^${expected}\$" $result]} {
+      puts "PASS: $name"
+    } else {
+      set fail_line [lindex [info frame -1] 3]
+      puts "FAIL: $name, want: $expected, got: $result line: $fail_line"
+    }
+  } else {
+    # Perform simple string comparison
+    if { $result eq $expected } {
+      puts "PASS: $name"
+    } else {
+      set fail_line [lindex [info frame -1] 3]
+      puts "FAIL: $name, want: $expected, got: $result line: $fail_line"
+    }
   }
 }
 

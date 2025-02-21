@@ -134,7 +134,7 @@ different platforms.
 
 ### `proc randhex`
 
-Added to generates a random hexadecimal string using SQLite’s randomblob() 
+Added to generate a random hexadecimal string using SQLite’s randomblob() 
 for top-notch randomness.  
 See: [functions.tcl](https://github.com/ufko-org/wapp/blob/main/functions.tcl) : proc randhex
 

@@ -254,6 +254,7 @@ subst
 switch
 tailcall
 tell
+test
 throw
 time
 timerate

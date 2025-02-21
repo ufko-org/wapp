@@ -64,6 +64,8 @@ All in one
 $: echo 'proc wapp-default {} { wapp-trim { Hello web! } }; wapp-start $argv' > index.cgi
 $: ./wapptclsh index.cgi --server 8082
 Listening for HTTP requests on TCP port 8082
+$: curl http://localhost:8082
+Hello web!
 ```
 
 ### **wapptclsh**  

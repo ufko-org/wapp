@@ -39,6 +39,16 @@ proc datetime {{fmt "%Y-%m-%d %H:%M:%S"} {mods "'now', 'localtime'"}} {
   }
 }
 
+proc randhex {{length 16}} {
+		# puts [time {randhex 16}]
+    set result ""
+    for {set i 0} {$i < $length} {incr i} {
+        set randByte [expr {int(rand() * 256)}]
+        append result [format "%02x" $randByte]
+    }
+    return $result
+}
+
 # ---------------------------------------------------------------------
 # Function: parray
 # Displays the contents of an array with custom formatting. This function
@@ -62,7 +72,7 @@ proc datetime {{fmt "%Y-%m-%d %H:%M:%S"} {mods "'now', 'localtime'"}} {
 proc parray {arrayName {keyfilter *} {valuefilter *}} {
   upvar 1 $arrayName __a
   if {![array exists __a]} {
-    return -code error "\"$arrayName\" isn't an array"
+    return -code error "Variable: \"$arrayName\" isn't an array"
   }
 
   set maxl 0

@@ -52,6 +52,12 @@ Wapp 1.0 shell using SQLite version 3.50.0 and TCL 9.0
 % datetime "%Y-%m-%d %H:%M:%S" "'now', '+1 day', 'localtime'"
 2025-02-21 08:07:13
 %
+
+$: ./wapptclsh script.tcl
+Hello World!
+
+$: ./wapptclsh index.cgi --server 8082
+Listening for HTTP requests on TCP port 8082
 ```
 
 ### **wapptclsh**  

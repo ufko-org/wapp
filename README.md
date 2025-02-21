@@ -126,7 +126,7 @@ different platforms.
 ### `proc test`
 
 Added as a no-nonsense test helper. Takes an expected value - either 
-a fixed one or a regex wrapped in //. Ditch the bloated test suites.
+a fixed one or a regex wrapped in //. Ditch the bloated test suites.  
 See: [functions.tcl](https://github.com/ufko-org/wapp/blob/main/functions.tcl) : proc test
 
 ### `proc parray`

@@ -220,7 +220,6 @@ global
 if
 incr
 info
-initialize_wapptclsh
 interp
 join
 lappend
@@ -328,6 +327,7 @@ wappInt-scgi-readable-unsafe
 wappInt-start-browser
 wappInt-start-listener
 wappInt-trace
+wapptclsh_init
 while
 yield
 yieldto

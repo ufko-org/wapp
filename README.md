@@ -53,7 +53,8 @@ $: ./wapptclsh script.tcl
 Hello World!
 
 Implement proc main in the app.tcl and ship it as a single file:
-$: echo 'proc main {} { puts "All in one" }' >> app.tcl && make
+$: echo 'proc main {} { puts "All in one" }' >> app.tcl
+$: make clean wapptclsh
 $: ./wapptclsh
 All in one
 
